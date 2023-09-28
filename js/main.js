@@ -43,7 +43,6 @@ const observerSections = new IntersectionObserver(revealSection, {
 })
 
 allSections.forEach(section => {
-    console.log(section);
     observerSections.observe(section);
     section.classList.remove('revealed');
 })
@@ -54,7 +53,6 @@ const handleSmoothScroll = (e, sectionSelector) => {
     e.preventDefault();
     const sectionId = document.querySelector(sectionSelector);
     const sectionCoords = sectionId.getBoundingClientRect();
-    console.log('Revealing:', e.target);
     window.scrollTo({
         left: sectionCoords.left + window.pageXOffset,
         top: sectionCoords.top + window.pageYOffset,
@@ -66,7 +64,6 @@ const handleSmoothScroll = (e, sectionSelector) => {
 navbarList.addEventListener('click', function (e) {
     if (e.target.tagName === 'A') {
         const navLinkId = e.target.getAttribute('href').slice(1);
-        console.log(navLinkId);
         handleSmoothScroll(e, `.section__${navLinkId}`);
     }
 });
