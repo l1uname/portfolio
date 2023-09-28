@@ -102,9 +102,9 @@ handleRedirect('social__x', 'https://x.com/emanuilko');
 handleRedirect('social__linkedin', 'https://linkedin.com/in/emanuil-kostadinov-330bba135');
 
 // GitHub redirects
-handleRedirect('link__gallery', 'https://github.com/l1uname');
-handleRedirect('link__notes', 'https://github.com/l1uname');
-handleRedirect('link__weather', 'https://github.com/l1uname');
+handleRedirect('link__gallery', 'https://github.com/l1uname/image-gallery-app');
+handleRedirect('link__notes', 'https://github.com/l1uname/to-do-notes-app');
+handleRedirect('link__weather', 'https://github.com/l1uname/weather-app');
 
 // Google reCaptcha
 document.getElementById('submitBtn').addEventListener('click', function (e) {
