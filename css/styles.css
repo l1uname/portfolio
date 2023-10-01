@@ -8,13 +8,16 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;
 }
 
 .main {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+}
+
+.overflow-hidden {
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -30,7 +33,6 @@ html, body {
     z-index: 1;
     position: sticky;
     top: 0;
-
 }
 
 .navbar h1 {
@@ -107,9 +109,9 @@ html, body {
     text-decoration: none;
 }
 
-.navbar__list a:hover {
-    color: inherit;
-}
+/*.navbar__list a:hover {*/
+/*    color: inherit;*/
+/*}*/
 
 .section {
     position: relative;
@@ -566,7 +568,7 @@ html, body {
     border: 1px solid red;
 }
 
-@media (min-width: 901px) and (max-width: 1299px) {
+@media (min-width: 912px) and (max-width: 1299px) {
     .navbar {
         flex-direction: column;
         height: auto;
@@ -604,7 +606,7 @@ html, body {
     .section__intro {
         padding: 1rem;
         align-items: center;
-        height: calc(100vh - 116px);
+        height: calc(100vh - 102px);
         transform: none;
         flex-direction: column-reverse;
         justify-content: center;
@@ -648,9 +650,13 @@ html, body {
     .message__about-me {
         text-align: justify;
     }
+
+    .section {
+        background: rgba(94, 197, 118, 0.22);
+    }
 }
 
-@media (min-width: 710px) and (max-width: 900px) {
+@media (min-width: 710px) and (max-width: 911px) {
 
     .navbar {
         flex-direction: column;
@@ -684,6 +690,15 @@ html, body {
         width: 0;
         right: 50%;
         background: transparent;
+    }
+
+    .navbar__list a.active {
+        color: inherit;
+    }
+
+    .navbar__list a.active::after {
+        width: auto;
+        right: auto;
     }
 
     .section__intro {
@@ -810,6 +825,15 @@ html, body {
         width: 0;
         right: 50%;
         background: transparent;
+    }
+
+    .navbar__list a.active {
+        color: inherit;
+    }
+
+    .navbar__list a.active::after {
+        width: auto;
+        right: auto;
     }
 
     .section__intro {
@@ -963,6 +987,15 @@ html, body {
         width: 0;
         right: 50%;
         background: transparent;
+    }
+
+    .navbar__list a.active {
+        color: inherit;
+    }
+
+    .navbar__list a.active::after {
+        width: auto;
+        right: auto;
     }
 
     .section__intro {
