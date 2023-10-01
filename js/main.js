@@ -42,13 +42,26 @@ const observerSections = new IntersectionObserver(revealSection, {
     rootMargin: `${navHeight}px`,
 })
 
-allSections.forEach(section => {
-    observerSections.observe(section);
-    section.classList.remove('revealed');
-})
+// Adjusting section visibility and overflow based on window width
+function checkWindowSize() {
+    allSections.forEach(section => {
+        if (window.innerWidth < 912) {
+            section.classList.add('revealed');
+            document.documentElement.classList.add('overflow-hidden');
+            document.body.classList.add('overflow-hidden');
+        } else {
+            observerSections.observe(section);
+            section.classList.remove('revealed');
+            document.documentElement.classList.remove('overflow-hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+    });
+}
+
+checkWindowSize();
+window.addEventListener('resize', checkWindowSize);
 
 // Handling smooth scrolling
-
 const handleSmoothScroll = (e, sectionSelector) => {
     e.preventDefault();
     const sectionId = document.querySelector(sectionSelector);
