@@ -1049,12 +1049,14 @@ html, body {
         justify-items: center;
     }
 
-    .section__about-me,
+    .section {
+        background: rgba(94, 197, 118, 0.22);
+    }
+
     .section__projects,
     .section__certifications,
     .section__contact-me {
         height: auto;
-        background: rgba(94, 197, 118, 0.22);
         justify-content: center;
     }
 
